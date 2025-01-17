@@ -22,6 +22,7 @@ from django.contrib.auth.urls import views as  auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('TWEET.urls')),
     path('tweet/', include('TWEET.urls')),
     path('accounts/', include('django.contrib.auth.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
